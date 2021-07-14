@@ -30,8 +30,8 @@ test('sumAndMultiplyThreeNumbers', (assert) => {
 
     assert.equal(result[0], 16);
     assert.equal(result[1], 140);
-    assert.equal(result[2], '4 and 7 and 5 sum to 16.');
-    assert.equal(result[3], 'The product of 4 and 7 and 5 is 140.');
+    assert.equal(result[2], '4 and 7 and 5 sum to 16');
+    assert.equal(result[3], 'The product of 4 and 7 and 5 is 140');
 });
 
 test('sumArrayWithThreeNumbers', (assert) => {
