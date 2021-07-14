@@ -12,7 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const sum = a + b;
+    let sum = a + b;
     return [sum, `The sum of ${a} and ${b} is ${sum}.`];
 }
 
@@ -27,8 +27,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-    const multiply = a * b;
-    return [multiply, `The product of ${a} and ${b} is ${multiply}.`];
+    let product = a * b;
+    return [product, `The product of ${a} and ${b} is ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -52,9 +52,10 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    var sumResult = a + b + c;
-    var productResult = a * b * c;
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    var sumResult = sum(sum(a, b)[0], c)[0];
+    var productResult = multiply(multiply(a, b)[0], c)[0];
+
     const string1 = `${a} and ${b} and ${c} sum to ${sumResult}`;
     const string2 = `The product of ${a} and ${b} and ${c} is ${productResult}`;
     return [sumResult, 
@@ -65,7 +66,6 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
-
 /////////////////////////////////////
 /* Problem 4
 Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers 
